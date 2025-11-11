@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - DudeWhereIsMyCaltrain</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2rem auto;
+            max-width: 760px;
+            padding: 0 1rem;
+            color: #222;
+            background: #fff;
+        }
+        h1, h2, h3 {
+            color: #111;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        ul {
+            padding-left: 1.25rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        strong {
+            font-weight: 600;
+        }
+        a {
+            color: #0b62ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+        .contact-card {
+            background: #f5f7fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .contact-card h3 {
+            margin-top: 0;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 0.5rem;
+        }
+        .faq-answer {
+            color: #444;
+            margin-left: 1rem;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #0b62ff;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        .button:hover {
+            background: #0050d8;
+            text-decoration: none;
+        }
+        code {
+            background: #f5f7fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #0d0f10;
+                color: #f2f4f5;
+            }
+            h1, h2, h3, .faq-question {
+                color: #ffffff;
+            }
+            .subtitle {
+                color: #a0a4a8;
+            }
+            a {
+                color: #8cb4ff;
+            }
+            .button {
+                background: #375dbd;
+            }
+            .button:hover {
+                background: #4d73d5;
+            }
+            hr, h2 {
+                border-top-color: #33373b;
+            }
+            .contact-card {
+                background: #1a1d21;
+            }
+            code {
+                background: #1a1d21;
+            }
+            .faq-answer {
+                color: #d0d3d6;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 1rem auto;
+                padding: 0 1rem;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            h2 {
+                font-size: 1.35rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Support</h1>
+    <p class="subtitle">Get help with DudeWhereIsMyCaltrain</p>
+
+    <div class="contact-card">
+        <h3>Need Help?</h3>
+        <p>We're here to help! If you're experiencing issues or have questions about DudeWhereIsMyCaltrain, check out the FAQ below or contact us directly.</p>
+        <a href="https://github.com/grumpy-studio-apps/support/issues" class="button">Report an Issue on GitHub</a>
+    </div>
+
+    <h2>Contact Information</h2>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:grumpy.studio.apps@gmail.com">grumpy.studio.apps@gmail.com</a></li>
+        <li><strong>GitHub Issues:</strong> <a href="
+https://github.com/grumpy-studio-apps/support/issues">DudeWhereIsMyCaltrain Issues</a></li>
+        <li><strong>Developer:</strong> Grumpy Studio Apps</li>
+    </ul>
+    <p>We typically respond within 24-48 hours. For the fastest response, please use GitHub Issues to report bugs or request features.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: Why am I not seeing real-time departure times?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> This could be due to several reasons:
+            <ul>
+                <li>Check your internet connection - the app requires network access to fetch live data from 511.org</li>
+                <li>Ensure your API key is valid (Settings → API Key). The default key should work for most users.</li>
+                <li>Caltrain may not be running at the current time (late night, early morning, or holidays)</li>
+                <li>Try pulling down to refresh the departure list</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: How do I change my departure and destination stations?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> There are two modes:
+            <ul>
+                <li><strong>Specific Stations Mode (default):</strong> Tap the ⚙️ Settings icon, then select your morning and afternoon departure/destination stations from the dropdowns.</li>
+                <li><strong>Use Nearest Station Mode:</strong> Toggle "Use Nearest Station" in Settings. The app will automatically detect your nearest Caltrain station using your location. You only need to select your destination.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: What's the difference between "Morning Destination" and "Afternoon Destination"?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> DudeWhereIsMyCaltrain is designed for commuters who travel in different directions at different times of day:
+            <ul>
+                <li><strong>Morning Destination:</strong> Where you're going in the morning (e.g., San Francisco for work)</li>
+                <li><strong>Afternoon Destination:</strong> Where you're going in the afternoon/evening (e.g., San Jose Diridon to go home)</li>
+                <li>The app automatically shows the relevant section first based on time of day (before noon = morning first, after noon = afternoon first)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: Why is the app asking for location permission?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> Location permission is only requested if you enable "Use Nearest Station" mode in Settings. This allows the app to automatically detect which Caltrain station is closest to you. If you prefer not to share your location, use "Specific Stations" mode instead, where you manually select your departure station.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: What do the colored dots next to train times mean?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> The colored indicators show train status:
+            <ul>
+                <li><strong>🟢 Green:</strong> On time</li>
+                <li><strong>🟡 Yellow:</strong> Delayed 1-5 minutes</li>
+                <li><strong>🔴 Red:</strong> Delayed more than 5 minutes</li>
+                <li><strong>⚪ Gray:</strong> Already departed</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: What does "Train skips this station" warning mean?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> Some Caltrain trains are express or limited-stop services that skip certain stations. If you see a yellow badge warning "Skips departure station" or "Skips destination", that train will NOT stop at your station - do not board it! Only trains without this warning will stop at both your departure and destination stations.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: How do I see which stations a train stops at?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> Tap on any train card in the departure list to see a detailed timeline of all intermediate stations and estimated arrival times. This helps you plan your journey and see which stations the train will stop at.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: Can I use a custom 511.org API key?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> Yes! If you have your own 511.org API key:
+            <ul>
+                <li>Go to Settings → API Key</li>
+                <li>Paste your API key</li>
+                <li>The app will use your key for all future requests</li>
+                <li>Get a free API key at <a href="https://511.org/open-data/token">511.org/open-data/token</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: Why isn't the widget showing live data?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> Widgets refresh on their own schedule determined by iOS:
+            <ul>
+                <li>iOS manages widget refresh based on battery, usage patterns, and other factors</li>
+                <li>Widgets typically update every 15-60 minutes</li>
+                <li>Open the main app to see the most up-to-date departure times</li>
+                <li>Widget data is cached and may show slightly older information</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: How do I switch between light and dark mode?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> Go to Settings and toggle the "Dark Mode" switch. The app defaults to dark mode, but you can switch to light mode anytime.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: The app shows "--:--:--" for departure times. What does this mean?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> This is a placeholder shown when:
+            <ul>
+                <li>No trains are currently scheduled (late night, early morning, or holidays)</li>
+                <li>No live data is available from 511.org</li>
+                <li>Check your internet connection and try refreshing</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Q: How accurate are the arrival times and travel durations?</div>
+        <div class="faq-answer">
+            <strong>A:</strong> Departure times come directly from 511.org's real-time API and are highly accurate. Arrival times and travel durations are calculated by the app based on:
+            <ul>
+                <li>Real-time departure information from your departure station</li>
+                <li>Real-time expected arrival at your destination station</li>
+                <li>The difference between these times gives you the actual travel duration</li>
+                <li>Arrival times account for delays and are updated in real-time</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Known Issues</h2>
+    <ul>
+        <li><strong>Background refresh disabled:</strong> Automatic background updates are currently disabled. Open the app to refresh departure times.</li>
+        <li><strong>Widget location updates:</strong> Widgets in "Use Nearest Station" mode may take longer to update location compared to the main app.</li>
+    </ul>
+
+    <h2>Feature Requests</h2>
+    <p>Have an idea for a new feature? We'd love to hear it! Please submit feature requests via:</p>
+    <ul>
+        <li><a href="
+https://github.com/grumpy-studio-apps/support/issues">GitHub Issues</a> (preferred)</li>
+        <li>Email: <a href="mailto:grumpy.studio.apps@gmail.com">grumpy.studio.apps@gmail.com</a></li>
+    </ul>
+
+    <h2>Reporting Bugs</h2>
+    <p>If you encounter a bug, please include the following information when reporting:</p>
+    <ul>
+        <li>iOS version (e.g., iOS 18.0)</li>
+        <li>iPhone model (e.g., iPhone 16 Pro)</li>
+        <li>App version (Settings → About or check App Store)</li>
+        <li>Steps to reproduce the issue</li>
+        <li>Screenshots if applicable</li>
+        <li>What you expected to happen vs. what actually happened</li>
+    </ul>
+    <p><a href="https://github.com/grumpy-studio-apps/support/issues/new">Create a new issue on GitHub</a></p>
+
+    <h2>Data Source</h2>
+    <p>DudeWhereIsMyCaltrain uses real-time transit data from:</p>
+    <ul>
+        <li><strong>511.org Transit API:</strong> Provides live departure and arrival information for all Caltrain stations</li>
+        <li><strong>Data accuracy:</strong> Data is as accurate as what 511.org receives from Caltrain</li>
+        <li><strong>Coverage:</strong> All Caltrain stations from San Francisco to Gilroy</li>
+    </ul>
+    <p>We are not affiliated with Caltrain or 511.org. For official Caltrain information, visit <a href="https://www.caltrain.com">caltrain.com</a>.</p>
+
+    <h2>Privacy</h2>
+    <p>Your privacy is important to us. Read our full <a href="https://grumpy-studio-apps.github.io/privacy-policies/">Privacy Policy</a> to learn how we handle your data.</p>
+    <p><strong>Quick summary:</strong></p>
+    <ul>
+        <li>We do not collect, store, or share your personal information</li>
+        <li>Location data (if enabled) stays on your device and is only used to find your nearest station</li>
+        <li>No analytics or tracking beyond what Apple provides through App Store Connect</li>
+    </ul>
+
+    <h2>System Requirements</h2>
+    <ul>
+        <li><strong>iOS:</strong> iOS 15.0 or later</li>
+        <li><strong>Devices:</strong> iPhone, iPad</li>
+        <li><strong>Internet:</strong> Required for real-time departure data</li>
+        <li><strong>Location (optional):</strong> Only needed for "Use Nearest Station" mode</li>
+    </ul>
+
+    <h2>App Store</h2>
+    <p>DudeWhereIsMyCaltrain is available for free on the App Store.</p>
+    <p>If you enjoy the app, please consider leaving a review - it helps other commuters discover the app!</p>
+
+    <hr>
+
+    <p style="text-align: center; color: #888; font-size: 0.9rem;">
+        <strong>DudeWhereIsMyCaltrain</strong><br>
+        Built with ❤️ for Bay Area commuters<br>
+        © 2024 Grumpy Studio Apps
+    </p>
+
+    <p style="text-align: center; margin-top: 1rem;">
+        <a href="https://grumpy-studio-apps.github.io/privacy-policies/">Privacy Policy</a>
+        •
+        <a href="mailto:grumpy.studio.apps@gmail.com">Contact</a>
+    </p>
+</body>
+</html>
