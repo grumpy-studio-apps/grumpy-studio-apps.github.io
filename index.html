@@ -1,162 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - DudeWhereIsMyCaltrain</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dude Where Is My Caltrain — Grumpy Studio</title>
     <style>
         :root {
-            color-scheme: light dark;
+            color-scheme: dark;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            margin: 2rem auto;
-            max-width: 760px;
-            padding: 0 1rem;
-            color: #222;
-            background: #fff;
+            margin: 0;
+            min-height: 100vh;
+            font-family: "SF Pro Display", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #050505;
+            color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
-        h1, h2, h3 {
-            color: #111;
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 640px;
         }
+
+        .logo {
+            width: min(240px, 60vw);
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.45));
+        }
+
         h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin: 0;
         }
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ddd;
+
+        p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin: 0;
+            line-height: 1.6;
+            color: #cfcfcf;
         }
-        h3 {
-            font-size: 1.25rem;
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
+        a.button {
+            text-decoration: none;
+            padding: 0.85rem 1.5rem;
+            border-radius: 999px;
+            font-weight: 600;
+            color: #050505;
+            background: linear-gradient(120deg, #ff5f6d, #ffc371);
+            transition: transform 150ms ease, box-shadow 150ms ease;
+            box-shadow: 0 10px 25px rgba(255, 99, 99, 0.25);
+        }
+
+        a.button.secondary {
+            color: #f5f5f5;
+            background: rgba(245, 245, 245, 0.12);
+            box-shadow: none;
+        }
+
+        a.button:hover,
+        a.button:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(255, 99, 99, 0.35);
+        }
+
+        footer {
             margin-top: 1.5rem;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-        ul {
-            padding-left: 1.25rem;
-        }
-        li {
-            margin: 0.5rem 0;
-        }
-        strong {
-            font-weight: 600;
-        }
-        a {
-            color: #0b62ff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        hr {
-            margin: 2rem 0;
-            border: none;
-            border-top: 1px solid #ddd;
-        }
-        .contact-card {
-            background: #f5f7fa;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .contact-card h3 {
-            margin-top: 0;
-        }
-        .faq-item {
-            margin-bottom: 1.5rem;
-        }
-        .faq-question {
-            font-weight: 600;
-            color: #111;
-            margin-bottom: 0.5rem;
-        }
-        .faq-answer {
-            color: #444;
-            margin-left: 1rem;
-        }
-        .button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: #0b62ff;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 1rem;
-        }
-        .button:hover {
-            background: #0050d8;
-            text-decoration: none;
-        }
-        code {
-            background: #f5f7fa;
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-        .app-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: #0d0f10;
-                color: #f2f4f5;
-            }
-            h1, h2, h3, .faq-question {
-                color: #ffffff;
-            }
-            .subtitle {
-                color: #a0a4a8;
-            }
-            a {
-                color: #8cb4ff;
-            }
-            .button {
-                background: #375dbd;
-            }
-            .button:hover {
-                background: #4d73d5;
-            }
-            hr, h2 {
-                border-top-color: #33373b;
-            }
-            .contact-card {
-                background: #1a1d21;
-            }
-            code {
-                background: #1a1d21;
-            }
-            .faq-answer {
-                color: #d0d3d6;
-            }
-        }
-
-        @media (max-width: 600px) {
-            body {
-                margin: 1rem auto;
-                padding: 0 1rem;
-            }
-            h1 {
-                font-size: 1.75rem;
-            }
-            h2 {
-                font-size: 1.35rem;
-            }
+            font-size: 0.9rem;
+            color: #8c8c8c;
         }
     </style>
 </head>
 <body>
+    <main>
+        <img src="https://grumpy-studio-apps.github.io/images/grumpystudio.png" alt="Grumpy Studio Logo" class="logo" />
+        <h1>Dude Where Is My Caltrain</h1>
+        <p>
+            Real-time Caltrain departures, smart reminders, and battery-light tracking built by
+            Grumpy Studio. Everything you need for a calmer Peninsula commute, wrapped in a dark-mode friendly experience.
+        </p>
+        <div class="cta-buttons">
+            <a class="button" href="mailto:grumpy.studio.apps@gmail.com">Contact Us</a>
+            <a class="button secondary" href="https://github.com/grumpy-studio-apps/support/issues/new/choose" target="_blank" rel="noopener">
+                Report an issue on GitHub
+            </a>
+        </div>
+        <footer>
+            &copy; <span id="year"></span> Grumpy Studio. All rights reserved.
+        </footer>
+    </main>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
+</html>
